@@ -1,0 +1,21 @@
+{
+  "name": "whatsapp-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ferdinandanggris",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "cheerio": "^1.0.0-rc.10",
+    "qrcode": "^1.4.4",
+    "qrcode-terminal": "^0.12.0",
+    "tiktok-api": "^0.4.1",
+    "tiktok-downloader": "0.0.4",
+    "tiktok-scraper": "^1.4.36",
+    "whatsapp-web.js": "^1.14.1"
+  }
+}
