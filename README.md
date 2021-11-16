@@ -4,3 +4,4 @@ Library :
  - whatsapp-web.js
  - qrcode-terminal
  - axios
+ - jimp
