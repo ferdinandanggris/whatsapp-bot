@@ -2,21 +2,22 @@ const fs = require("fs");
 const { Client,Location,List,Button } = require('whatsapp-web.js');
 const qrcode = require("qrcode-terminal");
 
-module.exports= checkSession = function () {
-    
+module.exports = auth = function () {
     const SESSION_FILE_PATH = '../session.json';
     let sessionCfg;
     if (fs.existsSync(SESSION_FILE_PATH)) {
         sessionCfg = require(SESSION_FILE_PATH);
     }
     const client = new Client({ puppeteer: { headless: true,excutablePath:'/usr/bin/chromium-browser'}, session: sessionCfg });
+
+    client.initialize();
     
     client.on('qr', (qr) => {
         // Generate and scan this code with your phone
         console.log('QR RECEIVED', qrcode.generate(qr));
     });
     
-    client.initialize();
+    
     
     client.on('qr', (qr) => {
         // NOTE: This event will not be fired if a session is specified.
